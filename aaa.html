@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #akku{
+            margin-left: 300px;
+     padding-left: 30px;
+     padding-top: 30px;
+     padding-bottom: 30px;
+     padding-right: 30px;
+     background-color:aquamarine;
+     width: 300px;
+     border-radius: 50px;
+    }
+        button{
+            background-color: white;
+            border: none;
+            border-radius: 10px;
+        }
+        button:hover{
+            background-color: black;
+            color: white;
+        }
+           #p{
+            text-align: center;
+            margin-left: 450px;
+            margin-top: 50px;
+            background-color: aquamarine;
+            width: 90px;
+            border-radius: 3px;
+           }
+        
+           
+       
+        
+            </style>
+</head>
+<body>
+    <div id="akku">
+        <h1 id="h1">00:00:00:00</h1>
+        <h2 id="h2">day,date-month-year</h2>
+        <button type="btn" onclick="start1()">START</button>
+        <button type="btn" onclick="stop1()">STOP</button>
+        <button type="btn" onclick="reset1()">RESET</button>
+        <button type="btn" onclick="lapse1()">LAPSE</button>
+    </div>
+    <p id="p"></p>
+
+    <script>
+        let b;
+        let count =0;
+        function start1(){
+           b= setInterval(()=>{
+            let time = new Date();
+                let sec = time.getSeconds();
+                let min = time.getMinutes();
+                let h = time.getHours();
+                let ms = time.getMilliseconds();
+                let date = time.getDate();
+                let month = time.getMonth();
+                let year = time.getFullYear();
+                let week = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
+                let day = time.getDay();
+
+                document.getElementById("h1").innerHTML = `${h}:${min}:${sec}:${ms}`
+                document.getElementById("h2").innerHTML = `${week[day]},${date}-${month}-${year}`
+                let a= document.getElementById("akku")
+            if(count%2==0){
+                a.style.background="red"
+                a.style.width="300px"
+                a.style.borderRadius="50px"
+                
+    
+            }
+            else{
+                a.style.background="blue"
+                a.style.width="300px"
+                a.style.borderRadius="50px"
+            }
+            count++
+            },500)
+
+        }
+
+        function stop1(){
+            clearInterval(b)
+        }
+
+        function reset1(){
+            time = 0;
+            h = 0;
+            min = 0; sec = 0;
+            ms = 0;
+            
+            document.getElementById("h1").innerHTML = `${h}:${min}:${sec}:${ms}`
+        }
+          
+        function lapse1(){
+            document.getElementById("p").innerHTML += document.getElementById("h1").innerHTML + "<br>"
+        }
+            
+
+       
+    </script>
+</body>
+</html>

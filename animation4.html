@@ -1,0 +1,79 @@
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate1 {
+  width: 50px;
+  height: 400px;
+  position: absolute;
+  background: red;
+  display: none;
+}
+#animate2 {
+  width: 50px;
+  height: 400px;
+  position: absolute;
+  background: red;
+  margin-left: 350px;
+  display: none;
+}
+button{
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+button:hover{
+    background-color: red;
+    border: none;
+}
+h2{
+    color: red;
+}
+</style>
+<body>
+
+<h2>My First JavaScript Animation</h2>
+<button type="button" onclick="myMove()">CLICK ME</button><br><br>
+<div id="container">
+<div id="animate1"> <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr></div>
+<div id="animate2"> <hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr><hr></div>
+</div>
+
+<script>
+function myMove(){
+
+ let animateA=document.getElementById("animate1");
+let pos=0;
+let a=setInterval(()=>{
+    if(pos==155){
+    //   pos=0;
+    }else{
+        animateA.style.left=pos+"px";
+        animateA.style.display="block"
+        pos++
+    }
+},0)
+
+
+let animateB=document.getElementById("animate2");
+let posA=0;
+let b=setInterval(()=>{
+    if(pos==155){
+    //   pos=0;
+    }else{
+        animateB.style.right=pos+"px";
+        animateB.style.display="block"
+        pos++
+    }
+},0)
+};
+
+
+</script>
+</body>
+</html>

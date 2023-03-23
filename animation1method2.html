@@ -1,0 +1,101 @@
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+  margin-left: 350px;
+
+}
+#animate2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+
+}
+#animate3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+margin-top: 350px;
+}
+#animate4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+  margin-left: 350px;
+  margin-top: 350px;
+}
+p{
+    text-align: center;
+} 
+button{
+    background-color: grey;
+    color: white;
+    border-radius: 5px;
+    border: none;
+}
+button:hover{
+    background-color: red;
+    border: none;
+}
+h2{
+    color: red;
+}
+</style>
+<body>
+
+<h2>My First JavaScript Animation</h2>
+<button type="button" onclick="myMove()">CLICK ME</button><br><br>
+<div id="container">
+<div id="animate1"><p>anukool</p></div>
+<div id="animate2"><p>Name:</p></div>
+<div id="animate3"><p>DOM</p></div>
+<div id="animate4"><p>expert</p></div>
+</div>
+
+<script>
+function myMove(){
+
+    let animateA=document.getElementById("animate1");
+    let animateB=document.getElementById("animate2");
+    let animateC=document.getElementById("animate3");
+    let animateD=document.getElementById("animate4");
+    let pos=0;
+let a=setInterval(()=>{
+    if(pos==151){
+    //   pos=0;
+    }else{
+        animateA.style.top=pos+"px";
+        animateA.style.right=pos+"px";
+        animateB.style.top=pos+"px";
+        animateB.style.left=pos+"px"
+        animateC.style.bottom=pos+"px";
+        animateC.style.left=pos+"px";
+        animateD.style.bottom=pos+"px";
+        animateD.style.right=pos+"px"
+        pos++
+    }
+},10)
+}
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* .box {
+            height: 100px;
+            width: 100px;
+            background-color: bisque;
+        } */
+        body {
+            height: 2000px;
+        }
+    </style>
+</head>
+
+<!-- <body>
+    <button  id="btn" type="buttton" onclick="anu()">click me</button>
+    <script>
+function anu(){
+    alert("btn is clicked")
+}
+    </script>
+</body> -->
+
+<!-- *******************************method2******************************** -->
+
+<!-- <button type="button" id="btn">clickme</button>
+<script>
+    let btn=document.getElementById("btn");
+    function anu(){
+        alert("btn is clicked")
+    }
+    btn.addEventListener('click',anu)
+</script> -->
+
+<!-- *****************************method3************************************ -->
+
+
+<!-- <button type="button" id="btn">click me</button>
+<script>
+    let btn=document.getElementById("btn");
+    btn.addEventListener('click',function(){
+        alert("btn is clicked")
+    }) -->
+
+<!-- *****************************mouseover and mouseout ******************************** -->
+
+<!-- <button type="button" id="btn">click me</button>
+<script>
+    let btn=document.getElementById("btn");
+    btn.addEventListener('mouseover',function(){
+        alert("btn is clicked")
+    }) -->
+
+<!-- <button type="button" id="btn">click me</button>
+<script>
+    let btn=document.getElementById("btn");
+    btn.addEventListener('mouseout',function(){
+        alert("btn is clicked")
+    }) -->
+
+<!-- *******we can add two event listener on a event***************** -->
+
+<!-- <button type="button" id="btn">click me</button>
+<script>
+    let btn=document.getElementById("btn");
+    function anu1(){
+console.log("clicl1 is activted")
+    }
+    function anu2(){
+console.log("clicl2 is activted")
+    }
+btn.addEventListener('click',anu1)
+btn.addEventListener('click',anu2) -->
+
+<!-- ***********************remove add listener********************** -->
+
+<!-- <button type="button" id="btn">click me</button>
+<script>
+    let btn=document.getElementById("btn");
+    function anu1(){
+console.log("clicl1 is activted")
+    }
+    function anu2(){
+console.log("clicl2 is activted")
+    }
+btn.addEventListener('click',anu1)
+btn.addEventListener('click',anu2)
+btn.removeEventListener('click',anu1) -->
+
+<!-- **********************page load***************************************** -->
+
+<!-- ******************************mouse event********************************************************************** -->
+
+<body>
+
+    <!-- ********onclick******* -->
+    <!-- <button type="button" id="btn" onclick="anu()">click me</button>
+    <script>
+       function anu(){
+        alert("click is activated")
+       }
+    </script> -->
+
+    <!-- *******onmouseover and onmouseout********** -->
+
+    <!-- <button type="button" id="btn" onmouseover="anu()">click me</button>
+    <script>
+       function anu(){
+        alert("click is activated")
+       }
+    </script>  -->
+
+    <!-- <button type="button" id="btn" onmouseout="anu()">click me</button>
+    <script>
+       function anu(){
+        alert("click is activated")
+       }
+    </script>  -->
+
+    <!-- *************ondblclick (double click)******** -->
+    <!-- <button id="btn" type="button" ondblclick="anu()">click me</button>
+<script>
+function anu(){
+    alert("dblclick is activated")
+}
+</script> -->
+
+    <!-- *******oncontextmenu******* -->
+    <!-- <button id="btn" type="button" oncontextmenu="anu()">click me</button>
+<script>
+function anu(){
+    alert("dblclick is activated")
+}
+</script> -->
+
+    <!-- *********moudedown and mouseup****** -->
+
+    <!-- <button id="btn" type="button" onmousedown="anu()">click me</button>
+<script>
+function anu(){
+    alert("dblclick is activated")
+}
+</script> -->
+
+
+    <!-- <butotn id="btn" type="button" onmouseup="anu()">click me</button>
+<script>
+function anu(){
+    alert("dblclick is activated")
+}
+</script> -->
+
+
+
+    <!-- ********************************************keyboard event****************************************** -->
+
+    <!-- *******************onkeyup*************************** -->
+    <!-- <div class="box"></div>
+    <script>
+        window.addEventListener('keydown', checkkey);
+        function checkkey(event) {
+            console.log("event.key")
+        }
+    </script> -->
+
+
+    <!-- *************************************scroll event************************************************ -->
+
+
+
+    <!-- <h1 class="h1">hello</h1>
+    <script>
+        window.addEventListener('scroll', function () {
+            console.log("scrolling....")
+        })
+    </script> -->
+
+    
+    <!-- <h1 class="h1">hello</h1>
+    <script>
+        window.addEventListener('wheel',function(event){
+            if(event.deltaY<0){
+                console.log("scrolling up")
+            }else if(event.deltaY>0){
+                console.log("scrolling down")
+            }
+        })
+    </script> -->
+
+
+     <!-- <h1 class="h1">hello</h1>
+    <script>
+        window.addEventListener('wheel',function(){
+            if(window.pageYOffset>150){
+             document.body.style.background="red"
+            }else{
+                document.body.style.background="white"
+            }
+        })
+    </script>  -->
+
+
+<!-- ********************************form event*********************************************** -->
+
+<!-- *****************************focus and blur and change and input event**************************** -->
+
+<!-- <input type="text" id="i">
+<script>
+    let a=document.getElementById("i");
+    a.addEventListener('focus',focusfunction)
+    a.addEventListener('blur',blurfunction)
+    a.addEventListener('change',function(){
+        console.log(this.value)
+    })
+    function focusfunction(){
+        a.style.background="yellow"
+    }
+    function blurfunction(){
+        a.style.background="green"
+    }
+   
+ -->
+
+    <!-- <input type="text" id="i">
+<script>
+    let a=document.getElementById("i");
+    a.addEventListener('focus',focusfunction)
+    a.addEventListener('blur',blurfunction)
+    a.addEventListener('input',function(){
+        console.log(this.value)
+    })
+    function focusfunction(){
+        a.style.background="yellow"
+    }
+    function blurfunction(){
+        a.style.background="green"
+    }
+</script> -->
+
+<!-- ****************************event bubbling and event capturing************** -->
+
+
+
+
+</body>
+
+
+
+</html>

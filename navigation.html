@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #div{
+           height:100px ;
+           width: 100px;
+           background-color:#000;
+        }
+    </style>
+</head>
+<body>
+    <div id="div">
+
+
+    </div>
+    <button id="btn">remove</button>
+    <h1 id="h1"></h1>
+    <script>
+
+        document.getElementById("btn").addEventListener("click", function(){document.getElementById("div").removeEventListener("mousemove",h1)})
+        document.getElementById("div").addEventListener("mousemove",h1)
+   
+
+    function h1(){
+        document.getElementById("h1").innerHTML=Math.random()*5;
+    }
+    </script>
+    
+</body>
+</html>

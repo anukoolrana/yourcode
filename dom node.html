@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <body>
+<div id="anu">
+    <p id="h1">this is my first heading</p>
+    <script>
+        let elm=document.getElementById("anu")
+        let text=document.createTextNode("hello")
+       let h1= document.createElement("h1")
+       h1.appendChild(text)
+elm.appendChild(h1)
+
+// ******************************for add class*************************
+h1.className="h1 tt"
+h1.idName="jj"
+
+    </script>
+</div>
+</body> -->
+
+<!-- ********************insertBefore() and remove child element************************************* -->
+
+<!-- <body>
+    
+<ul id="menu">
+    <li>list1</li>
+    <li>list2</li>
+    <li>list3</li>
+    <li>list4</li>
+</ul>
+<script>
+    let list=document.getElementById("menu")
+    let item=document.createElement("li")
+    item.textContent="new list";
+    let pos=list.firstElementChild;
+    let pos=list.firstElementChild.nextElementSibling;
+    let pos=list.firstElementChild.nextElementSibling.nextElementSibling;
+    list.insertBefore(item,pos)
+
+   list.removeChild(pos)
+</script>
+</body> -->
+
+<!-- ************************* clone element or copy element ********************** -->
+
+<body>
+    
+    <ul id="menu">
+        <li>list1</li>
+        <li>list2</li>
+        <li>list3</li>
+        <li>list4</li>
+    </ul>
+    <script>
+     let menu=document.getElementById("menu")
+     let cloneelement=menu.cloneNode(true)
+     document.body.appendChild(cloneelement)
+    </script>
+    </body>
+
+
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    .data2 .img{
+      margin-left: 300px;  
+    }
+</style>
+<body>
+<p id="data1"></p>
+<div class="data2">
+    <img class="img"><br>
+    <img class="img"><br>
+    <img class="img"><br>
+    <img class="img"><br>
+    <img class="img"><br>
+    <img class="img"><br>
+    <img class="img"><br>
+    <img class="img"><br>
+</div>
+
+   <script>
+fetch("https://637b347e6f4024eac206fb4c.mockapi.io/anukool")
+.then((Response)=>Response.json()).then((data)=>{
+for(i in data){
+    document.getElementById("data1").innerHTML+=`${data[i].id}.   ${data[i].name}   ${data[i].cityName}   ${data[i].state}<br><br><br><br><br> `
+    document.getElementsByClassName("img")[i].src=data[i].avatar; 
+}
+})
+   </script> 
+</body>
+</html>

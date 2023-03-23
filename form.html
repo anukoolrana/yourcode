@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <form  id="input1" >
+<input type="text" placeholder="Name"><br>
+<input type="number"  placeholder="Age"><br>
+<input type="number"  placeholder="Mobile"><br>
+<input type="text" placeholder="Email"><br>
+<button type="button" onclick="form1()">SUBMIT</button>
+</form>
+<P id="p2"></P>
+<p id="para"></p>
+    <script>
+   
+        let input1=document.getElementById("input1")
+   function form1(){
+   let name= input1[0].value;
+   let age=input1[1].value;
+   let mobile=input1[2].value;
+   let email=input1[3].value;
+if((name||age||mobile||email)==""){
+    document.getElementById("p2").innerHTML="All fild is require.."
+}
+
+else if(name||age||mobile||email){
+ document.getElementById("para").innerHTML +=`${name}  ${age}  ${mobile}  ${email} <br>`
+    for(i in input1){
+        input1[i].value="";
+    }
+}
+   }
+
+
+    </script>
+    
+</body>
+</html>

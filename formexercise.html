@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input1{
+            margin-left: 360px;
+            border: 2px solid black;
+            width: 400px;
+            /* height: 300px; */
+            text-align: center;
+            padding-top: 40px;
+            padding-bottom: 40px;
+            background-color: gray;
+            border-radius: 7px;
+        }
+        button{
+            color:black;
+            background-color: gray;
+            border-radius: 4px;
+        }
+        button:hover{
+            background-color: white;
+            color: gray;
+        }
+       .table1{
+        border-radius: 6px solid balck;
+            border: 1px solid black;
+            width: 900px;
+            text-align: center;
+            margin-top: 30px;
+            background-color: gray;
+            color: black;
+       }
+       #h1{
+        color: white;
+       }
+       select.loppp {
+            border-radius: 5px;
+            background-color: grey;
+            border: 2px solid black;
+        }
+        select.loop:hover{
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <form id="input1">
+        Name:&nbsp;&nbsp;&nbsp;&nbsp;<input type="text"><br><br>
+        phone:&nbsp;&nbsp;&nbsp;&nbsp;<input type="number"><br><br>
+        email:&nbsp;&nbsp;&nbsp;&nbsp;<input type="email"><br><br>
+        
+
+     
+        <select class="loppp">
+            <option value="">Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select>
+        <br><br>
+        <button type="button" onclick="form1()">submit</button>
+
+    </form><br><br><br>
+    <table class="table1">
+        <tr>
+
+            <th>Name</th>
+            <th>Mobile</th>
+            <th>Email</th>
+            <th>Gender</th>
+        </tr>
+        <tbody id="h1">
+
+        </tbody>
+    </table>
+    <script>
+        let input1 = document.getElementById("input1")
+        function form1() {
+            let name = input1[0].value;
+            let mobile = input1[1].value;
+            let email = input1[2].value;
+            
+           
+            let gender = input1[3].value;
+            if (name || mobile || email||gender) {
+                document.getElementById("h1").innerHTML += `<tr><td>${name}</td>     <td>${mobile}</td>    <td>${email}</td> <td>${gender}</td></tr>`
+                for (i in input1) {
+                    input1[i].value = "";
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

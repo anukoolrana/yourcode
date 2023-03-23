@@ -1,0 +1,119 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="h1"></h1>
+    <button type="btn" onclick="start1()">START</button>
+    <button type="btn" onclick="stop1()">STOP</button>
+    <button type="btn" onclick="reset1()">RESET</button>
+    <button type="btn" onclick="lapse()">LAPSE</button>
+   
+    <p id="p"></p>
+
+    <script>
+let a;
+let count=0;
+function start1(){
+a=setInterval(()=>{
+    count++;
+    document.getElementById("h1").innerHTML=count;
+},10)
+}
+
+
+function stop1(){
+    clearInterval(a)
+}
+
+function reset1(){
+    count=0;
+    document.getElementById("h1").innerHTML=count;
+}
+    
+function lapse(){
+        document.getElementById("p").innerHTML+=count+"<br>"
+
+}
+        
+
+
+    </script>
+    
+</body>
+</html> -->
+
+
+<!-- **************************** exercise **************************** -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="stopwatch.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="main1">
+            <h1 id="h1">00:00:00</h1>
+        <button type="btn" onclick="start1()">start</button>
+        <button type="btn" onclick="stop1()">stop</button>
+        <button type="btn" onclick="reset1()">reset</button>
+        <button type="btn" onclick="lapse1()">lapse</button>
+        <p id="p"></p>
+        </div>
+        
+    </div>
+       
+    
+    
+    <script>
+let a;
+let ms=0;
+let sec=0;
+let min=0;
+function start1(){
+    a=setInterval(()=>{
+        ms++;
+        if(ms==100){
+            ms=0;
+            sec++;
+        }
+        if(sec==60){
+            min++;
+        }
+        document.getElementById("h1").innerHTML=`${min}:${sec}:${ms}`
+    },10)
+}
+
+function stop1(){
+    clearInterval(a)
+}
+
+function reset1(){
+    ms=0;
+     sec=0;
+      min=0;
+
+    document.getElementById("h1").innerHTML=`${min}:${sec}:${ms}`
+}
+
+function lapse1(){
+    document.getElementById("p").innerHTML+=document.getElementById("h1").innerHTML+"<br>"
+}
+
+    </script>
+</body>
+</html>
+
+
+
+

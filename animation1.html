@@ -1,0 +1,107 @@
+<html>
+<style>
+#container {
+  width: 400px;
+  height: 400px;
+  position: relative;
+  background: yellow;
+}
+#animate1 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: red;
+  margin-left: 350px;
+}
+#animate2 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: green;
+
+}
+#animate3 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: purple;
+margin-top: 350px;
+}
+#animate4 {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  background: black;
+  margin-left: 350px;
+  margin-top: 350px;
+}
+</style>
+<body>
+
+<h2>My First JavaScript Animation</h2>
+<button type="button" onclick="myMove()">CLICK ME</button>
+<div id="container">
+<div id="animate1"></div>
+<div id="animate2"></div>
+<div id="animate3"></div>
+<div id="animate4"></div>
+</div>
+
+<script>
+function myMove(){
+
+    let animateA=document.getElementById("animate1");
+    let pos=0;
+let a=setInterval(()=>{
+    if(pos==350){
+      pos=0;
+    }else{
+        animateA.style.top=pos+"px";
+        animateA.style.right=pos+"px"
+        pos++
+    }
+},10)
+
+let animateB=document.getElementById("animate2");
+    let posB=0;
+let b=setInterval(()=>{
+    if(posB==350){
+      posB=0;
+    }else{
+        animateB.style.top=pos+"px";
+        animateB.style.left=pos+"px"
+        posB++
+    }
+},10)
+
+let animateC=document.getElementById("animate3");
+    let posC=0;
+let c=setInterval(()=>{
+    if(posC==300){
+      posC=0;
+    }else{
+        animateC.style.bottom=pos+"px";
+        animateC.style.left=pos+"px"
+        posC++
+    }
+},10)
+
+
+let animateD=document.getElementById("animate4");
+    let posD=0;
+let d=setInterval(()=>{
+    if(posD==300){
+      posD=0;
+    }else{
+        animateD.style.bottom=pos+"px";
+        animateD.style.right=pos+"px"
+        posD++
+    }
+},10)
+}
+
+
+
+</script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <h2 id="h2"></h2>
+    <button type="btn" onclick="start1()">START</button>
+    <button type="btn" onclick="stop1()">STOP</button>
+    <button type="btn" onclick="reset1()">RESET</button>
+    <button type="btn" onclick="lapse()">LAPSE</button>
+    <p id="p"></p>
+<script>
+    let a;
+    function start1(){
+         a=setInterval(()=>{
+            let time=new Date();
+            let sec=time.getSeconds();
+            let min=time.getMinutes();
+            let h=time.getHours();
+            let ms=time.getMilliseconds();
+            let date=time.getDate();
+            let month=time.getMonth();
+            let year=time.getFullYear();
+            let week=["sunday","monday","tuesday","wednesday","thursday","friday","saturday"]
+            let day=time.getDay();
+             document.getElementById("display").innerHTML=`${h} : ${min} : ${sec} : ${ms}`
+             document.getElementById("h2").innerHTML=`${week[day]} , ${date} - ${month} - ${year}`
+        },10)
+
+    }
+
+
+    function stop1(){
+        clearInterval(a)
+    }
+    function reset1(){
+        time=0
+        document.getElementById("display").innerHTML=time;
+    }
+
+    function lapse(){
+        document.getElementById("p").innerHTML+=document.getElementById("display").innerHTML+"<br>"
+    }
+
+
+
+
+</script>
+    
+</body>
+</html>
